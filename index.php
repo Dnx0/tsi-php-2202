@@ -1,95 +1,95 @@
-+<?php
+<?php
 
-+
 
-+// Vetores
 
-+
+// Vetores
 
-+$diaSemana = [0 => 'Domingo', 1 => 'Segunda', 2 => 'Terça', 3 => 'Quarta', 4=> 'Quinta', 5=> 'Sexta', 6=> 'Sábado'];
 
-+
 
-+//Muito importante para depuração do código - var_dump()
+$diaSemana = [0 => 'Domingo', 1 => 'Segunda', 2 => 'Terça', 3 => 'Quarta', 4=> 'Quinta', 5=> 'Sexta', 6=> 'Sábado'];
 
-+//var_dump($diaSemana);
 
-+$hoje = date('w');
 
-+
+//Muito importante para depuração do código - var_dump()
 
-+var_dump($hoje);
+//var_dump($diaSemana);
 
-+
+$hoje = date('w');
 
-+echo "Hoje é {$diaSemana [$hoje]}<br><br>"; //interpolação com vetor precisa das {}
 
-+
 
-+$aluno = [  0  => [  'matricula' => 634545, 
+var_dump($hoje);
 
-+
 
-+                'nome' => 'João',
 
-+
+echo "Hoje é {$diaSemana [$hoje]}<br><br>"; //interpolação com vetor precisa das {}
 
-+                'semestre' => 2],
 
-+
 
-+            1  => [  'matricula' => 8548, 
+$aluno = [  0  => [  'matricula' => 634545, 
 
-+
 
-+                'nome' => 'Paulo',
 
-+
+                'nome' => 'João',
 
-+                'semestre' => 3],
 
-+
 
-+            2  => [  'matricula' => 65422, 
+                'semestre' => 2],
 
-+
 
-+                'nome' => 'Maria',
 
-+
+            1  => [  'matricula' => 8548, 
 
-+                'semestre' => 1]];
 
-+            
 
-+echo '<table border = "1">
+                'nome' => 'Paulo',
 
-+        <tr>
 
-+            <td>Matrícula</td>
 
-+            <td>Nome</td>
+                'semestre' => 3],
 
-+            <td>Semestre</td>
 
-+        </tr>';
 
-+
+            2  => [  'matricula' => 65422, 
 
-+for( $i = 0 ; $i < count($aluno) ; $i++){
 
-+
 
-+        echo " <tr>
+                'nome' => 'Maria',
 
-+                    <td>{$aluno[$i]['matricula']}</td>
 
-+                    <td>{$aluno[$i]['nome']}</td>
 
-+                    <td>{$aluno[$i]['semestre']}</td>";
+                'semestre' => 1]];
 
-+}
+            
 
-+
+echo '<table border = "1">
 
-+echo '</table>';
+        <tr>
+
+            <td>Matrícula</td>
+
+            <td>Nome</td>
+
+            <td>Semestre</td>
+
+        </tr>';
+
+
+
+for( $i = 0 ; $i < count($aluno) ; $i){
+
+
+
+        echo " <tr>
+
+                    <td>{$aluno[$i]['matricula']}</td>
+
+                    <td>{$aluno[$i]['nome']}</td>
+
+                    <td>{$aluno[$i]['semestre']}</td>";
+
+}
+
+
+
+echo '</table>';
